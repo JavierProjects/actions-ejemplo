@@ -17,6 +17,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: nombre-del-proyecto
-          directory: ./public
+          directory: ./
       - name: Mensaje de despliegue  
         run: echo "SE desplego la pagina!!!"
