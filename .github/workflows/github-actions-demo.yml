@@ -2,7 +2,7 @@ name: Test y Deploy OOP Exercise
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
 
 jobs:
   test-and-deploy:
@@ -145,7 +145,7 @@ jobs:
       
       - name: Subir reporte de errores como artifact (si falló)
         if: steps.run_tests.outputs.status == 'failed'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: error-report-${{ github.run_number }}
           path: error_report.txt
