@@ -16,6 +16,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip  # Actualiza pip
+          pip install pytest                    # Instala pytest
       
       - name: Obtener información del commit
         id: commit_info
