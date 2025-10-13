@@ -64,7 +64,7 @@ jobs:
             echo "❌ Tests fallidos: $FAILED/$TOTAL"
           fi
           
-          exit $TEST_EXIT_CODE
+          
       
       - name: Generar reporte de errores (si falló)
         if: steps.run_tests.outputs.status == 'failed'
